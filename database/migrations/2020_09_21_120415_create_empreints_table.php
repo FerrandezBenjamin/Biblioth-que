@@ -38,6 +38,6 @@ class CreateEmpreintsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empreint');
+        Schema::dropIfExists('empreints');
     }
 }

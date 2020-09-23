@@ -1,8 +1,8 @@
 <?php
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Models\empreint;
+use App\Models\empreints;
 use Faker\Generator as Faker;
-$factory->define(empreint::class, function (Faker $faker) {
+$factory->define(empreints::class, function (Faker $faker) {
     $ids_users = \DB::table('users')->select('id')->get();
     $id_random_user = $faker->randomElement($ids_users)->id;
     $ids_books = \DB::table('books')->select('id')->get();
