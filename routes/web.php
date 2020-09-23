@@ -33,3 +33,16 @@ Route::get('/listelivre', 'ListeLivreController@index')->name('listelivre');
 //--------------ROUTE DE MON PANIER------------------//
 
 Route::get('/panier', 'PanierController@index')->name('panier');
+
+//---------------               ------------------//
+
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
