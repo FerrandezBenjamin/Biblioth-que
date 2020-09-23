@@ -25,3 +25,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/fichebook', 'FichebookController@index')->name('fichebook');
+
+//---------------ROUTE DE LA LISTE DES LIVRES--------//
+
+Route::get('/listelivre', 'ListeLivreController@index')->name('listelivre');
+
+//--------------ROUTE DE MON PANIER------------------//
+
+Route::get('/panier', 'PanierController@index')->name('panier');
