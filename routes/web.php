@@ -34,15 +34,12 @@ Route::get('/listelivre', 'ListeLivreController@index')->name('listelivre');
 
 Route::get('/panier', 'PanierController@index')->name('panier');
 
-//---------------               ------------------//
-
-
-
-
-
-
-
+//---------------ROUTE HOME------------------//
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//---------------ROUTE INFOS EMPREINT LIVRES------------------//
+
+ Route::get('/infosdateretour', 'InfosDateRetourController@index')->name('infosdateretour');
