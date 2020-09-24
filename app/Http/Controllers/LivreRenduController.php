@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Books;
+use App\Models\empreints;
 
-class ListeLivreController extends Controller
+class LivreRenduController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,7 +25,6 @@ class ListeLivreController extends Controller
      */
     public function index()
     {
-        $books = books::all();
-        return view('listelivre', ['books'=>$books]);
+        return view('livreRendu');
     }
 }

@@ -10,6 +10,7 @@ $factory->define(empreints::class, function (Faker $faker) {
     return [
         'id_users' => $id_random_user,
         'id_books' => $id_random_book,
+        'date_retour' => $faker->nullable(),
         'rented_at' => $faker->date(),
         'due_at'=> $faker->date(),
     ];

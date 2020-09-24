@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LivreRenduController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,23 @@ Route::get('/listelivre', 'ListeLivreController@index')->name('listelivre');
 //--------------ROUTE DE MON PANIER------------------//
 
 Route::get('/panier', 'PanierController@index')->name('panier');
+
+//---------------ROUTE HOME------------------//
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//---------------ROUTE INFOS EMPREINT LIVRES------------------//
+
+ Route::get('/infosdateretour', 'InfosDateRetourController@index')->name('infosdateretour');
+
+ //---------------ROUTE JE VEUX EMPREINTER CE LIVRES---------//
+
+ Route::get('/jeveuxempreinter/{id}', 'EmpreintsController@process')->name('jeveuxempreinter');
+
+ //---------------ROUTE LIVRE RENDU ----------------------//
+ 
+ Route::get('/livrerendu/{id}', 'EmpreintsController@delete')->name("livrerendu");
+ 
+

@@ -16,18 +16,19 @@ class CreateEmpreintsTable extends Migration
         Schema::create('empreints', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_users')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreignId('id_books')
-            ->references('id')
-            ->on('books')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-           $table->date('rented_at');
-           $table->date('due_at');
-           $table->timestamps();
+                ->references('id')
+                ->on('books')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->date('date_retour')->nullable();
+            $table->date('rented_at');
+            $table->date('due_at');
+            $table->timestamps();
         });
     }
 
