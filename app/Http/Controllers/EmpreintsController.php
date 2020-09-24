@@ -40,4 +40,11 @@ class EmpreintsController extends Controller
 
         return redirect('infosdateretour');
     }
+    
+    public function delete($id)
+    {
+        empreints::find($id)->delete();
+
+        return view('livreRendu');
+    }
 }

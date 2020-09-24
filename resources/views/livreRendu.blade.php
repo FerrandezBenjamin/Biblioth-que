@@ -2,7 +2,8 @@
 @section('content')
     <div class="content">
         <div class="title m-b-md">
-            FÉLICITATION, TU AS RENDUS TON LIVRE
+</br></br>
+            FÉLICITATION TU AS RENDUS TON LIVRE
         </div>
 
         <div class="links">

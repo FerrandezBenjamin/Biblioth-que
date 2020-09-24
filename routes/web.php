@@ -51,6 +51,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
  //---------------ROUTE LIVRE RENDU ----------------------//
  
- Route::get('livrerendu', 'LivreRenduController@index')->name("livrerendu");
+ Route::get('/livrerendu/{id}', 'EmpreintsController@delete')->name("livrerendu");
  
 
