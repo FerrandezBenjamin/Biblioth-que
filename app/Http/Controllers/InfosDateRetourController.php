@@ -28,7 +28,7 @@ class InfosDateRetourController extends Controller
     {
         $user_id= Auth::id();
         
-        $dateretourlivre = empreints::where('id_users', '=', $user_id)->get();
+        $dateretourlivre = empreints::join('books', 'empreints.id_books', '=', 'books.id')->select('*')->where('id_users', $user_id)->get();
         return view('infosdateretour', ['empreints'=>$dateretourlivre]);
         
     }
