@@ -37,7 +37,6 @@ Route::get('/panier', 'PanierController@index')->name('panier');
 
 //---------------ROUTE HOME------------------//
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
