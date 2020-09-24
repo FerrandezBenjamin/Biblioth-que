@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LivreRenduController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 //---------------ROUTE INFOS EMPREINT LIVRES------------------//
 
  Route::get('/infosdateretour', 'InfosDateRetourController@index')->name('infosdateretour');
+
+ //---------------ROUTE JE VEUX EMPREINTER CE LIVRES---------//
+
+ Route::get('/jeveuxempreinter/{id}', 'EmpreintsController@process')->name('jeveuxempreinter');
+
+ //---------------ROUTE LIVRE RENDU ----------------------//
+ 
+ Route::get('livrerendu', 'LivreRenduController@index')->name("livrerendu");
+ 
+

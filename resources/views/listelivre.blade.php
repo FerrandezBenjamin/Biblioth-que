@@ -9,7 +9,7 @@
 
     <div class="links">
         <a href="{{ url ('/')}}">Accueil</a>
-        <a href="{{ route ('panier')}}">Mon Panier</a>
+        <a href="{{ route ('infosdateretour')}}">Mes Livres Empreintés</a>
         <a href=" {{ route ('fichebook')}}">Fiche des livres</a>
         <a href="https://github.com/FerrandezBenjamin/Biblioth-que" target="_blank">GitHub</a>
     </div>
@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$book->title}}</h5>
                     <p class="card-text">{{$book->author}}</p>
-                    <a href="#" class="btn btn-primary">Je veux l'empreinter !</a>
+                    <a href="{{ route ('jeveuxempreinter', ['id' => $book->id] )}}" class="btn btn-primary">Je l'empreinte !</a>
                 </div>
             </div>
         </div>
